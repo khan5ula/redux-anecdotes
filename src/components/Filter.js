@@ -1,4 +1,4 @@
-import { filterAnecdote } from '../reducers/filterReducer'
+import { setFilter } from '../reducers/filterReducer'
 import { useDispatch } from 'react-redux'
 
 const Filter = (props) => {
@@ -7,7 +7,7 @@ const Filter = (props) => {
   const handleChange = (event) => {
     event.preventDefault()
     const searchTerm = event.target.value
-    dispatch(filterAnecdote(searchTerm))
+    dispatch(setFilter(searchTerm))
   }
 
   const style = {
