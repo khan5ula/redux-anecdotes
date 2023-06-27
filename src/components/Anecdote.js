@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux'
-import { incrementVote } from '../reducers/anecdoteReducer'
+import { increment } from '../reducers/anecdoteReducer'
 
 const Anecdote = ({ anecdote }) => {
   const dispatch = useDispatch()
 
   const handleVoteClick = (id) => {
     console.log('vote', id)
-    dispatch(incrementVote(id))
+    dispatch(increment(id))
   }
 
   return (

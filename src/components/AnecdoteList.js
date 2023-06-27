@@ -3,9 +3,10 @@ import Anecdote from './Anecdote'
 
 const Anecdotes = () => {
   const filter = useSelector(state => state.filter)
+  console.log(useSelector(state => state))
 
   const anecdotes = useSelector(state =>
-    state.anecdotes
+    [...state.anecdotes]
       .sort((a, b) => b.votes - a.votes)
       .filter(anecdote => {
         if (filter === 'ALL') {
