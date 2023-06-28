@@ -3,7 +3,6 @@ import Anecdote from './Anecdote'
 
 const Anecdotes = () => {
   const filter = useSelector(state => state.filter)
-  console.log(useSelector(state => state))
 
   const anecdotes = useSelector(state =>
     [...state.anecdotes]
