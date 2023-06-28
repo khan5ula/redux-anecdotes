@@ -7,13 +7,9 @@ const Notification = () => {
     padding: 10,
     borderWidth: 1,
     marginBottom: 15,
-    background: 'white'
+    background: 'lightGreen'
   }
-  return (
-    <div style={style}>
-      {notification}
-    </div>
-  )
+  return notification ? <div style={style}>{notification}</div> : null;
 }
 
 export default Notification

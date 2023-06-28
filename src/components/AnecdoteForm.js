@@ -13,7 +13,7 @@ const NewAnecdote = () => {
     const newAnecdote = await anecdoteService.createNew(content)
 
     dispatch(create(newAnecdote))
-    dispatch(setNotification(`New anecdote created: ${newAnecdote}`))
+    dispatch(setNotification(`New anecdote created: ${content}`))
     setTimeout(() => {
       dispatch(resetNotification())
     }, 5000)
